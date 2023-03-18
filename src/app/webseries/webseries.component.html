@@ -1,0 +1,40 @@
+<body>
+    <br><br><br>
+    <h2>Webseries</h2>
+    <br><br>
+
+
+
+    <h4 style="color: antiquewhite;"> Hollywood Webseries :</h4>
+        
+    <div #widgetsContent class="custom-slider-main">
+      
+      <div *ngFor ="let image of hollywoodWebseries" class="info-box">
+        <button id="asset2" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="expand(image)">
+          <img src={{image.url}} class="info-box">
+        </button> 
+      </div>
+      <fa-icon id="leftArrow" [icon]="leftArrow" (click)="scrollLeft()" style="color: antiquewhite;"></fa-icon>
+      <fa-icon id = "rightArrow" [icon]="rightArrow" (click)="scrollRight()" style="color: antiquewhite;"></fa-icon>
+      
+    </div>
+
+    <br/>
+
+    <h4 style="color: antiquewhite;"> Bollywood Webseries :</h4>
+        
+    <div #widgetsContent1 class="custom-slider-main">
+      
+      <div *ngFor ="let image of hollywoodWebseries" class="info-box">
+        <button id="asset2" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="expand(image)">
+          <img src={{image.url}} class="info-box">
+        </button> 
+      </div>
+      <fa-icon id="leftArrow1" [icon]="leftArrow" (click)="scrollLeft1()" style="color: antiquewhite;"></fa-icon>
+      <fa-icon id = "rightArrow1" [icon]="rightArrow" (click)="scrollRight1()" style="color: antiquewhite;"></fa-icon>
+      
+    </div>
+
+    <br/>
+
+</body>

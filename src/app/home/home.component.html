@@ -1,0 +1,95 @@
+<body>
+
+     <!-- carousels -->
+     <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./assets/fury.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./assets/hacksaw_ridge.jpg" class="d-block w-100" alt="..." >
+          </div>
+          <div class="carousel-item">
+            <img src="./assets/band_of_brothers.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./assets/1917.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <br>
+        
+    <!-- Most Watched -->  
+        <h4 style="color: antiquewhite;"> Most Watched</h4>
+        
+        <div #widgetsContent class="custom-slider-main">
+          
+          <div *ngFor ="let image of imageList" class="info-box">
+            <button id="asset2" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="expand(image)">
+              <img src={{image.url}} class="info-box">
+            </button> 
+          </div>
+          <fa-icon id="leftArrow" [icon]="leftArrow" (click)="scrollLeft()" style="color: antiquewhite;"></fa-icon>
+          <fa-icon id = "rightArrow" [icon]="rightArrow" (click)="scrollRight()" style="color: antiquewhite;"></fa-icon>
+          
+        </div>
+
+        <br>
+        <!-- Most liked -->  
+        <h4 style="color: antiquewhite;"> Most Liked</h4>
+        
+        <div #widgetsContent1 class="custom-slider-main">
+
+          <div class="info-box" *ngFor="let image of mostLiked">
+            <button id="asset2" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="expand(image)">
+              <img src={{image.url}} class="info-box">
+            </button> 
+          </div>
+          <fa-icon id="leftArrowMl" [icon]="leftArrow" (click)="scrollLeft1()" style="color: antiquewhite;"></fa-icon>
+          <fa-icon id = "rightArrowMl" [icon]="rightArrow" (click)="scrollRight1()" style="color: antiquewhite;"></fa-icon>
+              
+        </div>
+        
+        <br>
+
+
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" >
+    <div class="modal-content" >
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">{{title}}</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        {{description}}
+      </div>
+      <h1 class="modal-title fs-5"><b>Where to watch :</b> {{whereToWatch}} </h1>
+      <div class="modal-footer">
+        
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+    </div>
+        
+</body>

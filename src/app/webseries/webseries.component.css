@@ -1,0 +1,68 @@
+body{
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+}
+
+.custom-slider-main{
+    display: flex;
+    overflow: hidden;    
+    scroll-behavior: smooth;
+}
+
+ .info-box{
+    width: 400px;
+    height:300px;
+    padding: 10px;
+ }
+
+
+ #rightArrow, #leftArrow {
+    cursor: pointer;
+    position: absolute;
+    top: 48%;
+    width: auto;
+    margin-top: 20px;
+    padding: 17px;
+    color: grey;
+    font-weight: bold;
+    font-size: 19px;
+    transition: 0.4s ease;
+    border-radius: 0 5px 5px 0;
+    user-select: none;
+  }
+
+  #rightArrow {
+    right: 0;
+    border-radius: 4px 0 0 4px;
+  }
+
+
+  #asset2{
+    border: none;
+  cursor: pointer;
+  appearance: none;
+  background-color: inherit;
+  }
+
+
+  #rightArrow1, #leftArrow1 {
+    cursor: pointer;
+    position: absolute;
+    top: 48%;
+    width: auto;
+    margin-top: 350px;
+    padding: 17px;
+    color: grey;
+    font-weight: bold;
+    font-size: 19px;
+    transition: 0.4s ease;
+    border-radius: 0 5px 5px 0;
+    user-select: none;
+  }
+
+  #rightArrow1 {
+    right: 0;
+    border-radius: 4px 0 0 4px;
+  }
