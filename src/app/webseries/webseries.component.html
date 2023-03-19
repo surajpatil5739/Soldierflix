@@ -1,6 +1,6 @@
 <body>
     <br><br><br>
-    <h2>Webseries</h2>
+    <h2 id = "pageTitle">Webseries</h2>
     <br><br>
 
 
@@ -25,7 +25,7 @@
         
     <div #widgetsContent1 class="custom-slider-main">
       
-      <div *ngFor ="let image of hollywoodWebseries" class="info-box">
+      <div *ngFor ="let image of bollywoodWebseries" class="info-box">
         <button id="asset2" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="expand(image)">
           <img src={{image.url}} class="info-box">
         </button> 
@@ -35,6 +35,28 @@
       
     </div>
 
-    <br/>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" >
+            <div class="modal-content" >
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">{{title}}</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                {{description}}
+              </div>
+              <h1 class="modal-title fs-5"><b>Where to watch :</b> {{whereToWatch}} </h1>
+              <div class="modal-footer">
+                
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        
+    <br/><br><br>
 
 </body>

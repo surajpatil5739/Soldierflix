@@ -33,15 +33,30 @@ export class WebseriesComponent {
 
   hollywoodWebseries = [
     {url : "./assets/band_of_brothers.jpg"},
-    {url : "./assets/1917.jpg"},
-    {url : "./assets/fury.jpg"},
-    {url : "./assets/Behind_Enemy_Lines_movie.jpg"},
+    {url : "./assets/jackRyan.jpg"},
+    {url : "./assets/theBrave.jpg"},
+    {url : "./assets/sealTeam.jpg"},
+    {url : "./assets/thePacific.jpg"},
+    {url : "./assets/strikeBack.jpg"}
+  ]
+
+  bollywoodWebseries = [
+    {url : "./assets/testCase.jpg"},
+    {url : "./assets/TheForgottenArmy_AzaadiKeLiye.jpg"},
+    {url : "./assets/bardOfBlood.jpg"},
+    {url : "./assets/specialOps.jpg"},
     {url : "./assets/hacksaw_ridge2.jpg"},
     {url : "./assets/band_of_brothers.jpg"}
   ]
 
-  expand(image : any){
+  title : string = "Title";
+  description:string = "...";
+  whereToWatch:string = "...";
 
+  expand(image : any){
+    this.title = image.title;
+    this.description = image.description;
+    this.whereToWatch = image.whereToWatch;
   }
 
 

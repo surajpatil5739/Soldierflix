@@ -1,0 +1,68 @@
+<body>
+    <br><br><br>
+
+
+
+     <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="card shadow-lg border-0">
+              <div class="card-body">
+                <h3>Welcome</h3>
+
+                <ng-container *ngIf="logIn == true; then displayLogInForm; else displayRegistrationForm"></ng-container>
+                <ng-template #displayRegistrationForm>
+                    <div>
+                        <form>
+                            <div class="form-group">
+                                <label for="email">Name</label>
+                                <input type="text" class="form-control" [(ngModel)]="name"  >
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Mobile No.</label>
+                                <input type="text" class="form-control" [(ngModel)]="mobile"  >
+                            </div>
+                            <div class="form-group">
+                              <label for="email">Email address</label>
+                              <input type="email" class="form-control" [(ngModel)]="email"  >
+                            </div>
+                            <div class="form-group">
+                              <label for="password">Password</label>
+                              <input type="password" class="form-control" [(ngModel)]="password" placeholder="Password">
+                            </div>
+                            <br>
+                            <button type="submit" class="btn btn-primary btn-block" (click)="register()">Register</button>
+                            <br>
+                            <a type="button" (click)="gotToLogIn()" style="color: blue;">Log In ?</a>
+                          </form>
+                    </div>
+                 </ng-template>
+
+
+                 <ng-template #displayLogInForm>
+                    <div>
+                        <form>
+                            <div class="form-group" >
+                              <label for="email">Email address</label>
+                              <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                            </div>
+                            <div class="form-group">
+                              <label for="password">Password</label>
+                              <input type="password" class="form-control" id="password" placeholder="Password">
+                            </div>
+                            <br>
+                            <button type="submit" class="btn btn-primary btn-block">Login</button>
+                            <br>
+                            <a type="button" (click)="gotToRegistration()" style="color: blue;">Create New Account ?</a>
+                          </form>
+                    </div>
+                 </ng-template>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <br><br><br><br><br>
+</body>

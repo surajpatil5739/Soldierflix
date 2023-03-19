@@ -1,0 +1,92 @@
+<body>
+    <br><br><br>
+    <h2 id = "pageTitle">Movies</h2>
+    <br><br>
+
+
+
+    <h4 style="color: antiquewhite;"> World War Movies :</h4>
+        
+    <div #widgetsContent class="custom-slider-main">
+      
+      <div *ngFor ="let image of worldWarMovies" class="info-box">
+        <button id="asset2" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="expand(image)">
+          <img src={{image.url}} class="info-box">
+        </button> 
+      </div>
+      <fa-icon id="leftArrow" [icon]="leftArrow" (click)="scrollLeft()" style="color: antiquewhite;"></fa-icon>
+      <fa-icon id = "rightArrow" [icon]="rightArrow" (click)="scrollRight()" style="color: antiquewhite;"></fa-icon>
+      
+    </div>
+
+    <br/>
+
+    <h4 style="color: antiquewhite;"> Non World War Movies :</h4>
+        
+    <div #widgetsContent1 class="custom-slider-main">
+      
+      <div *ngFor ="let image of nonWorldWarMovies" class="info-box">
+        <button id="asset2" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="expand(image)">
+          <img src={{image.url}} class="info-box">
+        </button> 
+      </div>
+      <fa-icon id="leftArrow1" [icon]="leftArrow" (click)="scrollLeft1()" style="color: antiquewhite;"></fa-icon>
+      <fa-icon id = "rightArrow1" [icon]="rightArrow" (click)="scrollRight1()" style="color: antiquewhite;"></fa-icon>
+      
+    </div>
+
+    <br/>
+
+    <h4 style="color: antiquewhite;"> Bollywood Movies :</h4>
+        
+    <div #widgetsContent2 class="custom-slider-main">
+      
+      <div *ngFor ="let image of bollywoodMovies" class="info-box">
+        <button id="asset2" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="expand(image)">
+          <img src={{image.url}} class="info-box">
+        </button> 
+      </div>
+      <fa-icon id="leftArrow2" [icon]="leftArrow" (click)="scrollLeft2()" style="color: antiquewhite;"></fa-icon>
+      <fa-icon id = "rightArrow2" [icon]="rightArrow" (click)="scrollRight2()" style="color: antiquewhite;"></fa-icon>
+      
+    </div>
+
+    <br/>
+
+    <h4 style="color: antiquewhite;"> Short Movies :</h4>
+        
+    <div #widgetsContent3 class="custom-slider-main">
+      
+      <div *ngFor ="let image of shortMovies" class="info-box">
+        <button id="asset2" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="expand(image)">
+          <img src={{image.url}} class="info-box">
+        </button> 
+      </div>
+      <fa-icon id="leftArrow3" [icon]="leftArrow" (click)="scrollLeft3()" style="color: antiquewhite;"></fa-icon>
+      <fa-icon id = "rightArrow3" [icon]="rightArrow" (click)="scrollRight3()" style="color: antiquewhite;"></fa-icon>
+      
+    </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" >
+            <div class="modal-content" >
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">{{title}}</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                {{description}}
+              </div>
+              <h1 class="modal-title fs-5"><b>Where to watch :</b> {{whereToWatch}} </h1>
+              <div class="modal-footer">
+                
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+    <br>
+</body>
