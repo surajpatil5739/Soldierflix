@@ -8,9 +8,11 @@ import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./movies.component.css']
 })
 export class MoviesComponent {
+  // variables for arrow icon
   rightArrow = faChevronRight;
   leftArrow = faChevronLeft;
 
+  // Functions to control scrolling in world war movies
   @ViewChild('widgetsContent') widgetsContent! : ElementRef ;
 
   scrollLeft(){
@@ -21,6 +23,7 @@ export class MoviesComponent {
     this.widgetsContent.nativeElement.scrollLeft += 400;
   }
 
+  // arraylist to store info of world war movies
   worldWarMovies = [
     {url : "./assets/savingPrivateRyan.jpg"},
     {url : "./assets/dunkirk.jpg"},
@@ -30,6 +33,7 @@ export class MoviesComponent {
     {url : "./assets/lettersFromIwoJima.jpg"}
   ]
 
+   // Functions to control scrolling in non-world war movies
   @ViewChild('widgetsContent1') widgetsContent1! : ElementRef ;
 
   scrollLeft1(){
@@ -40,6 +44,7 @@ export class MoviesComponent {
     this.widgetsContent1.nativeElement.scrollLeft += 400;
   }
 
+  // arraylist to store info of non-world war movies
   nonWorldWarMovies = [
     {url : "./assets/topGun.jpg"},
     {url : "./assets/hurtLocker.jpg"},
@@ -49,6 +54,7 @@ export class MoviesComponent {
     {url : "./assets/siege.jpg"}
   ]
 
+  // Functions to control scrolling in bollywood movies
   @ViewChild('widgetsContent2') widgetsContent2! : ElementRef ;
 
   scrollLeft2(){
@@ -59,6 +65,7 @@ export class MoviesComponent {
     this.widgetsContent2.nativeElement.scrollLeft += 400;
   }
 
+  // arraylist to store info of bollywood movies
   bollywoodMovies = [
     {url : "./assets/border.jpg"},
     {url : "./assets/lakshya.jpg"},
@@ -68,6 +75,7 @@ export class MoviesComponent {
     {url : "./assets/band_of_brothers.jpg"}
   ]
 
+  // Functions to control scrolling in short movies
   @ViewChild('widgetsContent3') widgetsContent3! : ElementRef ;
 
   scrollLeft3(){
@@ -78,6 +86,7 @@ export class MoviesComponent {
     this.widgetsContent3.nativeElement.scrollLeft += 400;
   }
 
+  // arraylist to store info of short movies
   shortMovies = [
     {url : "./assets/lastPost.jpg"},
     {url : "./assets/theSoldier.jpg"},
@@ -88,10 +97,12 @@ export class MoviesComponent {
   ]
 
 
+  // variables to store values to be displayed in modal
   title : string = "Title";
   description:string = "...";
   whereToWatch:string = "...";
 
+  // function to display modal
   expand(image : any){
     this.title = image.title;
     this.description = image.description;

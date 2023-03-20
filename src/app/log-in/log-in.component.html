@@ -2,7 +2,7 @@
     <br><br><br>
 
 
-
+    <!-- LogIn and Registration form using ngIf concept -->
      <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-6">
@@ -11,6 +11,7 @@
                 <h3>Welcome</h3>
 
                 <ng-container *ngIf="logIn == true; then displayLogInForm; else displayRegistrationForm"></ng-container>
+                <!-- Registration form -->
                 <ng-template #displayRegistrationForm>
                     <div>
                         <form>
@@ -38,7 +39,7 @@
                     </div>
                  </ng-template>
 
-
+                 <!-- LogIn form -->
                  <ng-template #displayLogInForm>
                     <div>
                         <form>
